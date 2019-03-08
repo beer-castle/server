@@ -11,6 +11,7 @@ const usersRouter = require('./routes/users');
 const beersRouter = require('./routes/beers');
 const mapsRouter = require('./routes/maps');
 const videosRouter = require('./routes/videos');
+const pictureRouter = require('./routes/picture');
 
 const app = express();
 app.use(cors());
@@ -27,5 +28,6 @@ app.use('/users', usersRouter);
 app.use('/beers', beersRouter);
 app.use('/maps', mapsRouter);
 app.use('/videos',videosRouter);
+app.use('/pictures', pictureRouter);
 
 module.exports = app;

@@ -38,4 +38,5 @@ class BeerController {
     }
 }
 
+
 module.exports = BeerController;
