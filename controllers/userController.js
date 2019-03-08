@@ -35,6 +35,7 @@ class ClassController {
           email: req.body.email
         })
         .then(user => {
+          console.log(process.env, 'tes====')
           if(!user) {
             res.status(400).json({
               message: 'Wrong Email/Password'
