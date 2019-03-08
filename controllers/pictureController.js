@@ -2,8 +2,8 @@ const request = require("request-promise");
 
 class PictureController {
 
+
   static getPicture (req, res) {
-    console.log(req.query)
     request.get("https://api.shutterstock.com/v2/images/search", {
       json: true,
       headers: {
@@ -14,9 +14,7 @@ class PictureController {
         pass: process.env.S_SECRET
       },
       qs: {
-        query: req.query.search,
-        "image_type": "photo",
-        "orientation": "vertical"
+        query: `Beer`
       },
       useQueryString: true
     })
