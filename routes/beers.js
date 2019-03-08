@@ -3,8 +3,7 @@ const router = express.Router();
 const BeerController = require('../controllers/beerController');
 
 /* GET beers listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/onday', BeerController.onday);
+router.get('/list', BeerController.list);
 
 module.exports = router;
